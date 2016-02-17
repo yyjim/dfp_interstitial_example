@@ -1,7 +1,8 @@
 //  Copyright (c) 2014 Google. All rights reserved.
 
-#import "AppDelegate.h"
+#import <VungleSDK/VungleSDK.h>
 
+#import "AppDelegate.h"
 #import "ViewController.h"
 
 @interface AppDelegate ()
@@ -11,9 +12,13 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application
-    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
-  return YES;
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // Override point for customization after application launch.
+    
+    // VungleSDK
+    [[VungleSDK sharedSDK] startWithAppId:@"682612717"];
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -13,9 +13,11 @@
 		CF530A8B19B7793E00D75035 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF530A8A19B7793E00D75035 /* ViewController.m */; };
 		CF530A8E19B7793E00D75035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF530A8C19B7793E00D75035 /* Main.storyboard */; };
 		CF530A9019B7793E00D75035 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF530A8F19B7793E00D75035 /* Images.xcassets */; };
+		FB264A571C7457F5006722E6 /* libVungleAdapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB264A561C7457F5006722E6 /* libVungleAdapter.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36EA0908B14E92E324C69297 /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
 		72DADC373E55E0F1822A05FC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40B7B28F0580D76783C8D47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CF530A7F19B7793D00D75035 /* DFPInterstitialExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DFPInterstitialExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +30,7 @@
 		CF530A8D19B7793E00D75035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF530A8F19B7793E00D75035 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EE32D312CC8FE3119103C683 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FB264A561C7457F5006722E6 /* libVungleAdapter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVungleAdapter.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB264A571C7457F5006722E6 /* libVungleAdapter.a in Frameworks */,
 				9C28720ABEB58B83C50C5D81 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +51,7 @@
 			children = (
 				C40B7B28F0580D76783C8D47 /* Pods.debug.xcconfig */,
 				EE32D312CC8FE3119103C683 /* Pods.release.xcconfig */,
+				36EA0908B14E92E324C69297 /* Pods.adhoc.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -58,6 +63,7 @@
 				CF530A8019B7793D00D75035 /* Products */,
 				4F1770014AE61B47CC63A375 /* Pods */,
 				ECE78EEFF0367FA7DA5781F0 /* Frameworks */,
+				FB264A541C7457D9006722E6 /* Vendor */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +104,22 @@
 				72DADC373E55E0F1822A05FC /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB264A541C7457D9006722E6 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				FB264A551C7457F5006722E6 /* VungleAdapter */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		FB264A551C7457F5006722E6 /* VungleAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				FB264A561C7457F5006722E6 /* libVungleAdapter.a */,
+			);
+			path = VungleAdapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +351,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = DFPInterstitialExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/VungleAdapter",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cardinalblue.DFPInterstitialExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5091e2e8-4641-4d8b-9a85-4fcb4c96a4a4";
@@ -343,6 +369,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = DFPInterstitialExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/VungleAdapter",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cardinalblue.DFPInterstitialExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5091e2e8-4641-4d8b-9a85-4fcb4c96a4a4";
@@ -388,13 +418,17 @@
 		};
 		FB3E0F311C61FEBE00E62588 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE32D312CC8FE3119103C683 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 36EA0908B14E92E324C69297 /* Pods.adhoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Cardinal Blue Software, Inc (F6J8B455GU)";
 				INFOPLIST_FILE = DFPInterstitialExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/VungleAdapter",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cardinalblue.DFPInterstitialExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5091e2e8-4641-4d8b-9a85-4fcb4c96a4a4";
