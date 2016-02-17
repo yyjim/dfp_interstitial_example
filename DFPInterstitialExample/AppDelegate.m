@@ -1,6 +1,8 @@
 //  Copyright (c) 2014 Google. All rights reserved.
 
 #import <VungleSDK/VungleSDK.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 #import "AppDelegate.h"
 #import "ViewController.h"
@@ -15,7 +17,8 @@
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
+    [Fabric with:@[[Crashlytics class]]];
+
     // VungleSDK
     [[VungleSDK sharedSDK] startWithAppId:@"682612717"];
     return YES;

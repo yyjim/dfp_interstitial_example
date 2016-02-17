@@ -135,6 +135,7 @@
 				CF530A7D19B7793D00D75035 /* Resources */,
 				AEFDE82DB93D48085509D070 /* Embed Pods Frameworks */,
 				CAB8F8BD2FE21B72F3AE9460 /* Copy Pods Resources */,
+				FB264A581C74594E006722E6 /* Run Crashlytics Script */,
 			);
 			buildRules = (
 			);
@@ -234,6 +235,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		FB264A581C74594E006722E6 /* Run Crashlytics Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Crashlytics Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 80270a52c57d6f1e140c698a298494a13f175076 b69aa7aa2481c88295487f3eec3fe20bbccab7020abeafad84d3782cdaeb9b8e";
 		};
 /* End PBXShellScriptBuildPhase section */
 

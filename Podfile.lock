@@ -1,12 +1,19 @@
 PODS:
+  - Crashlytics (3.6.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.5)
   - Google-Mobile-Ads-SDK (7.6.0)
   - VungleSDK-iOS (3.2.0.1)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - Google-Mobile-Ads-SDK (~> 7.5)
   - VungleSDK-iOS
 
 SPEC CHECKSUMS:
+  Crashlytics: e4e8d02914f2608fbc7bf42b1a7af838b0db67a2
+  Fabric: 338ffd3c2afcab120638907b4251189de9ad17b3
   Google-Mobile-Ads-SDK: 0290020329c61183c4685304264b73382bc49fb4
   VungleSDK-iOS: e18cf2f47cf0abe096d4b162f583bd197de1ea28
 
